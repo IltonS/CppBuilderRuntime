@@ -4,6 +4,8 @@
 #pragma hdrstop
 
 #include "Master.h"
+#include "RuntimeColors.h"
+#include "Tables.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -23,6 +25,9 @@ void __fastcall TFrmMaster::FormShow(TObject *Sender)
 	}
 
 	PageControl->ActivePage = TsMain;
+
+	PnlUserName->Caption = (DmTables->RequireAuth) ? DmTables->UserName : EmptyStr;
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TFrmMaster::FormCreate(TObject *Sender)
@@ -98,7 +103,7 @@ void __fastcall TFrmMaster::SetDarkBackground(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TFrmMaster::SetNormalBackground(TObject *Sender)
 {
-    TPanel *panel = static_cast<TPanel *>(Sender);
+	TPanel *panel = static_cast<TPanel *>(Sender);
 	panel->Color = MAIN_COLOR;
 }
 //---------------------------------------------------------------------------
@@ -108,7 +113,7 @@ void __fastcall TFrmMaster::PnlSobreClick(TObject *Sender)
 {
 	AboutBox = new TAboutBox(this);
 	AboutBox->ShowModal();
-    delete AboutBox;
+	delete AboutBox;
 }
 //---------------------------------------------------------------------------
 

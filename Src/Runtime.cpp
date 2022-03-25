@@ -6,8 +6,11 @@
 //---------------------------------------------------------------------------
 #include <Vcl.Styles.hpp>
 #include <Vcl.Themes.hpp>
+#include "Startup.h"
 USEFORM("Forms\Master.cpp", FrmMaster);
 USEFORM("Forms\About.cpp", AboutBox);
+USEFORM("Tables\Tables.cpp", DmTables); /* TDataModule: File Type */
+USEFORM("Forms\PassWord.cpp", PasswordDlg);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
@@ -15,7 +18,7 @@ int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 	{
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
-		Application->CreateForm(__classid(TFrmMaster), &FrmMaster);
+		auto_exec();
 		Application->Run();
 	}
 	catch (Exception &exception)

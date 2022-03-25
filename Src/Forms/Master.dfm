@@ -21,7 +21,7 @@ object FrmMaster: TFrmMaster
     Top = 0
     Width = 976
     Height = 555
-    ActivePage = TsFile
+    ActivePage = TsMain
     Align = alClient
     Style = tsFlatButtons
     TabOrder = 0
@@ -158,9 +158,6 @@ object FrmMaster: TFrmMaster
           Color = clGrayText
           ParentBackground = False
           TabOrder = 5
-          ExplicitLeft = 0
-          ExplicitTop = 394
-          ExplicitWidth = 185
         end
         object PnlLineTop: TPanel
           AlignWithMargins = True
@@ -175,8 +172,6 @@ object FrmMaster: TFrmMaster
           Color = clGrayText
           ParentBackground = False
           TabOrder = 6
-          ExplicitLeft = 3
-          ExplicitWidth = 179
         end
         object PnlAcao2: TPanel
           Left = 0
@@ -192,7 +187,6 @@ object FrmMaster: TFrmMaster
           OnClick = PnlAcao2Click
           OnMouseEnter = SetDarkBackground
           OnMouseLeave = SetNormalBackground
-          ExplicitTop = 82
         end
         object PnlAcao1: TPanel
           Left = 0
@@ -304,7 +298,6 @@ object FrmMaster: TFrmMaster
         BevelOuter = bvNone
         Color = clMedGray
         TabOrder = 1
-        ExplicitTop = 33
         object ToolBar: TToolBar
           Left = 0
           Top = 0
@@ -353,7 +346,6 @@ object FrmMaster: TFrmMaster
         Color = clMedGray
         ParentBackground = False
         TabOrder = 3
-        ExplicitTop = 502
         object PnlTimer: TPanel
           Left = 783
           Top = 0
@@ -362,6 +354,15 @@ object FrmMaster: TFrmMaster
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 0
+        end
+        object PnlUserName: TPanel
+          Left = 0
+          Top = 0
+          Width = 257
+          Height = 25
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
         end
       end
     end

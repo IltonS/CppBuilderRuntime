@@ -3,7 +3,6 @@
 #ifndef MasterH
 #define MasterH
 //---------------------------------------------------------------------------
-#include <RuntimeColors.h>
 #include <System.Classes.hpp>
 #include <Vcl.Buttons.hpp>
 #include <Vcl.ComCtrls.hpp>
@@ -26,6 +25,7 @@
 #include <Vcl.ToolWin.hpp>
 #include <System.ImageList.hpp>
 #include <Vcl.ImgList.hpp>
+#include <System.SysUtils.hpp>
 //---------------------------------------------------------------------------
 class TFrmMaster : public TForm
 {
@@ -64,6 +64,7 @@ __published:	// IDE-managed Components
 	TPanel *PnlAcao1;
 	TLabel *Label1;
 	TLabel *Label2;
+	TPanel *PnlUserName;
 	void __fastcall VoltarClick(TObject *Sender);
 	void __fastcall SetDarkBackground(TObject *Sender);
 	void __fastcall SetNormalBackground(TObject *Sender);
